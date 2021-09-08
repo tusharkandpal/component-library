@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap');
+
+/* :root */
+:root {
+    --primary-color: #93C5FD;
+    --secondary-color: #D0CDE1;
+    --off-white: #F3F4F6;
+}
+
+/* body */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+hr {
+    margin: 2rem 0;
+}
+
+/* container */
+.container {
+    padding: 0 1rem;
+}
+.container-center {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* links */
+.link {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: black;
+}
+.link-primary {
+    background-color: var(--primary-color);
+}
+.link-secondary {
+    border: 2px solid var(--primary-color);
+}
+
+/* lists */
+.list-non-bullet {
+    list-style: none;
+}
+.list-item-inline {
+    display: inline;
+    padding: 0 0.5rem;
+}
+
+/* nav */
+.navigation {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+}
+.navigation .nav-brand {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.navigation .nav-pills {
+    text-align: right;
+}
+.navigation .link-active {
+    color: var(--off-white);
+    font-weight: 800;
+}
+
+/* header */
+.hero {
+    padding: 2rem;
+}
+.hero .hero-img {
+    max-width: 300px;
+    display: block;
+    margin: auto;
+}
+.hero .hero-heading {
+    text-align: center;
+    padding-top: 1rem;
+    color: var(--secondary-color);
+}
+
+/* section */
+.section {
+    padding: 1rem;
+}
+.section-ow {
+    background-color: var(--off-white);
+    border-radius: 0.5rem;;
+}
+.section h1 {
+    text-align: center;
+}
+
+/* footer */
+.footer {
+    background-color: var(--primary-color);
+    padding: 2rem 0;
+    border-bottom-right-radius: 1rem;
+    text-align: center;
+}
+.footer .social-links {
+    padding-inline-start: 0;
+}
