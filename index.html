@@ -5,128 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Component Library</title>
     <link href='./styles.css' rel='stylesheet' />
+    <title>home | tusharkandpal</title>
 </head>
 
 <body>
-    <h1>tushar's component library</h1>
-    <p>I'm attending neog.camp and I want a library to make all my projects look good and consistent.</p>
-
-    <hr>
-
-    <h2>@typography</h2>
-
-    <h1>This is the biggest heading</h1>
-    <h2>This is the second biggest</h2>
-    <p>Let me show you the normal text. This is free flowing and will wrap at the end like a paragraph.</p>
-    <p>This paragraph will have a <strong>bold</strong> text</p>
-    <small>This is relatively smaller text</small>
-
-    <hr>
-
-    <h2>@container</h2>
-
-    <h3>fluid container</h3>
-    <div class='container'>This is a fluid container and it will go till the end of the page</div>
-
-    <h3>center container</h3>
-    <div class='container container-center'>This is a centered container and it will go till the specified width</div>
-
-    <hr>
-
-    <h2>@links</h2>
-
-    <a href='/' class='link link-primary'>Primary Link</a>
-    <a href='/' class='link link-secondary'>Secondary Link</a>
-
-    <hr>
-
-    <h2>@lists</h2>
-
-    <h3>unordered list</h3>
-
-    <ul class='list-non-bullet'>
-        <li>Item one</li>
-        <li>Item two</li>
-        <li>Item three</li>
-    </ul>
-
-    <h3>unordered inline list</h3>
-
-    <ul class='list-non-bullet'>
-        <li class='list-item-inline'>Inline item one</li>
-        <li class='list-item-inline'>Inline item two</li>
-        <li class='list-item-inline'>Inline item three</li>
-    </ul>
-
-    <h3>reversed ordered list</h3>
-
-    <ol reversed>
-        <li>milk</li>
-        <li>eggs</li>
-        <li>bread</li>
-    </ol>
-
-    <hr>
-
-    <h2>@nav</h2>
-
     <nav class='navigation container'>
-        <div class='nav-brand'>iAmBrand</div>
+        <div class='nav-brand'>tushar's portfolio</div>
         <ul class='list-non-bullet nav-pills'>
             <li class='list-item-inline'>
                 <a href='/' class='link link-active'>home</a>
             </li>
             <li class='list-item-inline'>
-                <a href='/' class='link'>products</a>
+                <a href='./projects.html' class='link'>projects</a>
             </li>
             <li class='list-item-inline'>
-                <a href='/' class='link'>about</a>
+                <a href='./blogs.html' class='link'>blogs</a>
             </li>
         </ul>
     </nav>
 
-    <hr>
-
-    <h2>@header</h2>
-
     <header class='hero'>
-        <img src='assets/hero.svg' class='hero-img' />
-        <h1 class='hero-heading'>heading inside <span style="color: var(--primary-color)">hero</span></h1>
+        <img src='../assets/hero.svg' class='hero-img' />
+        <h1 class='hero-heading'>Hi! I'm Tushar, <span style="color: var(--primary-color)">a passionate developer</span></h1>
     </header>
 
-    <hr>
-
-    <h2>@section</h2>
+    <section class='section section-ow'>
+        <div class='container container-center'>
+            <h1>technologies</h1>
+            <p>I know HTML, CSS, Javascript, Node.js, ReactJS as part of my self-learning and through neog.camp</p>
+        </div>
+    </section>
 
     <section class='section'>
-        <div class='container-center'>
-            <h1>white section</h1>
-            <p>This will have white background. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum expedita eos nesciunt, nisi obcaecati enim minus ratione cupiditate dignissimos, et necessitatibus ex reiciendis ea temporibus in explicabo, consectetur commodi repudiandae!</p>
+        <div class='container container-center'>
+            <h1>projects</h1>
+            <p>List of all projects I made during the course of my learning</p>
+            <a href='./projects.html' class='link link-primary'>Browse projects</a>
         </div>
     </section>
 
     <section class='section section-ow'>
-        <div class='container-center'>
-            <h1>off white section</h1>
-            <p>This will have grey background. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quod vitae consectetur fugiat sint similique iste perferendis voluptatum corrupti eveniet. Assumenda perspiciatis veritatis maxime consequuntur doloremque impedit quidem facere amet.</p>
+        <div class='container container-center'>
+            <h1>blogs</h1>
+            <p>On my way, I wrote few articles which I found interesting</p>
+            <a href='./blogs.html' class='link link-secondary'>Read blogs</a>
         </div>
     </section>
 
-    <hr>
-
-    <h2>@footer</h2>
-
     <footer class='footer'>
-        <div class='footer-header'>Some small heading inside footer</div>
+        <div class='footer-header'>let's be in touch</div>
         <ul class='social-links list-non-bullet'>
-            <li class='list-item-inline'><a href='/' class='link'>socialOne</a></li>
-            <li class='list-item-inline'><a href='/' class='link'>socialTwo</a></li>
-            <li class='list-item-inline'><a href='/' class='link'>socialThree</a></li>
+            <li class='list-item-inline'><a href='/' class='link'>twitter</a></li>
+            <li class='list-item-inline'><a href='/' class='link'>github</a></li>
+            <li class='list-item-inline'><a href='/' class='link'>linkedin</a></li>
         </ul>
     </footer>
-
 </body>
 
 </html>
