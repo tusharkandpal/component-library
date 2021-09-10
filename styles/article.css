@@ -1,0 +1,26 @@
+body {
+    line-height: 1.5rem;
+}
+section {
+    margin: 1rem 0;
+}
+.article {
+    padding: 2rem;
+    max-width: 80%;
+    margin: auto;
+}
+.article-heading {
+    font-size: 1.3rem;
+}
+.list-item {
+    margin: 0.5rem 0;
+}
+code {
+    background-color: black;
+    color: white;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+}
+blockquote {
+    border-left: 0.5rem solid black;
+}

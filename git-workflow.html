@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='./styles/styles.css' rel='stylesheet' />
+    <link href='./styles/article.css' rel='stylesheet' />
+    <title>git-workflow | tusharkandpal</title>
+</head>
+
+<body>
+    <nav class='navigation container'>
+        <div class='nav-brand'>tushar's portfolio</div>
+        <ul class='list-non-bullet nav-pills'>
+            <li class='list-item-inline'>
+                <a href='/' class='link link-active'>home</a>
+            </li>
+            <li class='list-item-inline'>
+                <a href='./projects.html' class='link'>projects</a>
+            </li>
+            <li class='list-item-inline'>
+                <a href='./blogs.html' class='link'>blogs</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class='hero'>
+        <h1 class='hero-heading'> <span style="color: var(--primary-color)">Fork & Branch Git WorkFlow</span></h1>
+    </header>
+
+    <section class='section-ow'>
+        <div class='article'>
+        <p>To create a PR (Pull Request), I used a Fork & Branch Git Workflow mentioned below:</p>
+        <h4>Prerequisites:</h4>
+        <ul class='list-non-bullet'>
+            <li class='list-item'>GitHub account</li>
+            <li class='list-item'>Git installed in local machine</li>
+        </ul>
+        <h4>Guidelines:</h4>
+        <ul class='list-non-bullet'>
+            <li>Every other open source project has its own set of guidelines to follow before creating a PR. So, please
+                go
+                through the project details & make changes as per the rules.</li>
+        </ul>
+
+        <h4>Terminologies:</h4>
+        <ul class='list-non-bullet'>
+            <li class='list-item'><strong>Local:</strong> It typically means "on our computer".</li>
+            <li class='list-item'><strong>Remote:</strong> It is the code hosting service like Github,
+                Bitbucket & others.</li>
+        </ul>
+        <h3 class='article-heading'>Step 1: Fork the Repository</h3>
+        <ul>
+            <li class='list-item'>Open the original repository in GitHub.</li>
+            <li class='list-item'>Click on the Fork in the top right corner (below your profile icon).</li>
+            <li class='list-item'>In a matter of seconds, it will be ready with your forked repository.</li>
+        </ul>
+        <h3 class='article-heading'>Step 2: Make a Local Clone</h3>
+        <ul>
+            <li class='list-item'>In your local machine, move to the location you want to clone your forked repository.
+                Right-click and choose Git Bash Here option. This will open the Git terminal.</li>
+            <li class='list-item'>Type <code>git clone {URL of forked repository}</code></li>
+            <li class='list-item'>In a matter of seconds, it will be ready with your forked repository.</li>
+            <blockquote>
+                <ul><strong>Note:</strong>
+                    <li class='list-item'>"URL of forked repository" will be unique for every user. You can find it
+                        under Code > HTTPS in your
+                        GitHub account inside the forked repository.</li>
+                    <li class='list-item'>For any repository, default Git remote name is origin</li>
+                </ul>
+            </blockquote>
+
+            <li class='list-item'><strong>Syntax: </strong><code>cd {repository-name}</code> to enter the cloned
+                repository.</li>
+
+        </ul>
+        <h3 class='article-heading'>Step 3: Adding a Remote</h3>
+        <ul>
+            <li class='list-item'><strong>Syntax: </strong><code>git remote add upstream
+                    {URL of original repository}</code></li>
+            <blockquote>
+                <ul><strong>Note:</strong>
+                    <li class='list-item'>Git remote name to pull changes from the original repo is
+                        <strong>upstream</strong> here.</li>
+                    <li class='list-item'>You can name it
+                        anything.
+                        We will need it at a later point.</li>
+                </ul>
+            </blockquote>
+        </ul>
+        <h3 class='article-heading'>Step 4: Working In a Branch</h3>
+        <ol>
+            <li class='list-item'>Create and Checkout</li>
+            <h4>Method 1</h4>
+            <p><code>git branch {branch-name}</code></p>
+            <p><code>git checkout {branch-name}</code></p>
+            <h2>OR</h2>
+            <h4>Method 2 (shorthand for Method 1)</h4>
+            <p><code>git checkout -b {branch-name}</code></p>
+            <p><strong>Example: </strong><code>git checkout -b feature</code></p>
+            <p>Executing either method creates & switches to the new branch i.e feature.</p>
+            <li class='list-item'>Make changes to the files via any editor of your choice
+                Any changes made will be in the feature branch, not main (formerly known as the master)
+                a.k.a root branch.</li>
+            <li class='list-item'>Commit those changes</li>
+            <p><code>git add .</code></p>
+            <p><code>git commit -m "{message}"</code></p>
+        </ol>
+        <h3 class='article-heading'>Step 5: Pushing changes to GitHub</h3>
+        <ul>
+            <li class='list-item'><strong>Syntax: </strong><code>git push {remote}
+                    {branch}</code></li>
+            <p><code>git push origin feature</code></p>
+        </ul>
+        <h3 class='article-heading'>Step 6: Opening a Pull Request</h3>
+        <ul>
+            <li class='list-item'>GitHub makes it incredibly easy.
+                Click on <strong>Compare & Pull Request</strong> button.</li>
+            <li class='list-item'>
+                Provide a brief title & description.
+                Click on <strong>Create Pull Request</strong> to submit.</li>
+            <li class='list-item'>Wait for it to be merged.</li>
+        </ul>
+        <h3 class='article-heading'>Step 7: Cleaning Up After a Merged PR</h3>
+        <ul>
+            <li class='list-item'>Once the PR is merged, pull changes from the original repo</li>
+            <p><code>git pull upstream main</code></p>
+            <blockquote>
+                <ul><strong>Note:</strong>
+                    <li class='list-item'>You need to switch the branch to main before deleting the feature branch
+                        (next command).</li>
+
+            </blockquote>
+            <p><code>git checkout main</code></p>
+
+            <li>Delete the feature branch locally</li>
+            <p><code>git branch -d feature</code></p>
+            <li>Push changes to forked repo > main branch</li>
+            <p><code>git push origin main</code></p>
+            <li>Delete the feature branch remotely</li>
+            <p><code> git push origin --delete feature</code></p>
+        </ul>
+        <h3 class='article-heading'>Step 8: Keeping your Forked Repo in Sync with the Original Repo</h3>
+        <ul>
+            <li class='list-item'>It's recommended to do this every time before raising a PR / time-to-time to
+                update your Forked Repo > main branch
+            </li>
+            <p><code>git pull upstream main</code></p>
+
+            <p><code>git push origin main</code></p>
+
+        </ul>
+    </div>
+    </section>
+    <footer class='footer'>
+        <div class='footer-header'>let's be in touch</div>
+        <ul class='social-links list-non-bullet'>
+            <li class='list-item-inline'><a href='https://twitter.com/tushar_kandpal/' target='_blank'
+                    class='link'>twitter</a></li>
+            <li class='list-item-inline'><a href='https://github.com/tusharkandpal/' target='_blank'
+                    class='link'>github</a></li>
+            <li class='list-item-inline'><a href='https://www.linkedin.com/in/tushar-kandpal/' target='_blank'
+                    class='link'>linkedin</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
