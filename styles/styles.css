@@ -29,7 +29,7 @@ hr {
 /* links */
 .link {
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
   color: black;
 }
@@ -73,7 +73,7 @@ hr {
   margin: 2rem 0 0 0;
 }
 .hero .hero-img {
-  max-width: 70%;
+  max-width: 80%;
   width: 350px;
   display: block;
   margin: auto;
