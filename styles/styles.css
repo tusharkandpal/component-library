@@ -42,6 +42,7 @@ hr {
 
 /* lists */
 .list-non-bullet {
+  padding-inline-start: 0;
   list-style: none;
 }
 .list-item-inline {
@@ -61,6 +62,10 @@ hr {
 }
 .navigation .nav-pills {
   text-align: right;
+}
+.navigation .link {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
 }
 .navigation .link-active {
   color: var(--off-white);
